@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			5， get和post请求的区别？
+			Get： 请求参数直接拼接在url之后 有缓存 传递数据小 不安全
+			Post 请求数据放在请求体里面， 无缓存 传递数据量大 相对安全
+			6， 三种阻止事件冒泡方式
+			1 在函数后添加retunrn false
+			2 event.stopPropagation()
+			3 event.cancelBubble = true
+			7， http状态码
+			开头的状态码(信息类)， 接受的请求正在处理， 信息类状态码
+			100, 200。 404, 403, 500
+			5 xx(服务器错误) 这些状态码表示服务器在尝试处理请求时发生内部错误。
+			这些错误可能是服务器本身的错误， 而不是请求的错误
+			3 xx(重定向) 表示要完成请求， 需要进一步操作。 通常这些状态代码用来重定向。
+			301， 永久性重定向， 表示资源已被分配了新的 URL
+			302， 临时性重定向， 表示资源临时被分配了新的 URL
+			9, 构造函数的原型prototype和其实例对象的原型__proto__都是指向的是同一个对象
+			10, 判断字符串中是否包含某个字符要用函数 indexOf
+			11, 实现页面滚动到一定程度才显示“ 回到顶部” 按钮， 需要监听的事件名是 scroll
+			12， typeof： 检测数据类型， 检测的结果是一个字符串
+			如果是多重typeof最后的结果都是“ string”
+			13， 数据类型检测的几种方式： typeof， instanceof， constrctof
+			13， symbol是唯一值， 两个symbol也不相等
+			14， 浏览器常用内核
+			webkit 谷歌
+			gecko 火狐
+			trident IE
+			内核也叫引擎， 可以解析代码
+			15, js数据类型判断
+			typeof 检测基本数据类型
+			instanceof 后面一定要是对象类型， 并且大小写不能错， 该方法适合一些条件选择或分支。 判断结果为 true或FALSE
+			Object.prototype.toString.call()
+			适用于所有类型的判断检测, 注意区分大小写.toString方法, 在Object原型上返回数据格式
+			16， 数组里面的增删改查
+			puch 数组最后一项添加， 会改变数组长度
+			unshift 数组第一项添加， 会改变数组长度
+			pop 数组最后一项删除， 会改变数组长度
+			shift 数组第一项删除， 会改变数组长度
+			length 索引值改变， 不会改变数组长度
+			delete 索引值改变， 不会改变数组长度
+			splice（ n， m， b） 第一个参数是索引值， 第二个参数是改变个数， 第三个参数为改变后的内容
+			查询拼接
+			slice（ n， m） 查询索引值从n到m的值， 不包含m
+			substr（ n， m） 查询索引值从n到m的值， 包含m后一项
+			concat 拼接
+			转换为字符串
+			toString() 转换为以逗号分割的字符串
+			join("") 可编辑分隔符
+			split() 分割字符串， 并放在一个新集合
+			17. 在函数前添加async标记可以使此函数变为异步函数
+			箭头函数也可以定义为异步函数
+			await 把异步结果以同步返回值的形式返回
+			优点： 简化代码结构 减少嵌套 优化语法结构
+			await 只能在async函数中使用
+			模块化： 模块化作用域隔离， 有自己的空间， 互不干预；
+			模块导入：
+			import data from ""
+			模块导出：
+			export default data
+			// import：es6模块化语法中是不能在node或浏览器中直接使用，一般用在vue框架或react框架中
+		</script>
+		<button onclick="getUsers()">获取所有用户</button>
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script>
+			//jquery针对jsonp请求封装了一个函数, $.getJSON()  参数callback的值写?表示回调是匿名函数
+			//jsonp的jquery 方法
+			function getUsers() {
+				$.getJSON("http://192.168.208.117:5000/users?callback=?", data => {
+					console.log(3, data)
+				})
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			语义化标签: 使用单词作为标签, 使标签更容易被识别
+			常见的语义化标签： header， nav， footer， main， aside 结构类
+			p， h1 - h6， strong, i, u, del 文本类
+			语义化标签： 使内容结构化， 看起来清晰， 便于浏览器， 搜索引擎解析。
+			搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重， 利于SEO;
+			SEO， 是英文SearchEngineOptimization的缩写， 中文的意思: 搜索引擎优化。 SEO的目的就是让网站或者网页在搜索结果中， 处于靠前的位置。
+			实现SEO优化的方式有:
+				1、 合理的title、 description、 keywords： 搜索对着三项的权重逐个减小
+			title值强调重点即可； description把页面内容高度概括， 不可过分堆砌关键词； keywords列举出重要关键词。
+			2、 语义化的HTML代码， 符合W3C规范： 语义化代码让搜索引擎容易理解网页
+			3、 重要内容HTML代码放在最前： 搜索引擎抓取HTML顺序是从上到下， 保证重要内容一定会被抓取
+			4、 重要内容不要用js输出： 爬虫不会执行js获取内容
+			5、 少用iframe： 搜索引擎不会抓取iframe中的内容
+			6、 非装饰性图片必须加alt
+			7、 提高网站速度： 网站速度是搜索引擎排序的一个重要指标。
+			流式布局: 网页默认的布局方式, 元素按照行标签从左向右, 块标签从上向下依次排列, 尽量不使标签重叠
+			弹性布局: html5新增的网页布局方式, 需要手动设置, 有如下特点:
+				1， 弹性布局总是给父元素设置， 对第一级子元素起效
+			2， 弹性布局元素默认从左向右排列， 不换行， 高度为100 % （包含margin）
+			3， 弹性布局元素没有行标签块标签之分， 可以正常设置宽距和宽高
+			4， 弹性布局元素不能使用浮动， 可以使用定位
+			总结： 弹性布局中的属性设置：
+			弹性容器的属性设置：
+			display: flex;
+			设置弹性容器
+			flex - wrap: wrap;
+			设置换行
+			justify - content: space - evenly;
+			设置水平对齐方式
+			align - items: center;
+			设置单行对齐方式
+			align - content: flex - start;
+			设置多行对齐方式
+			弹性元素的属性设置：
+			align - self: flex - end;
+			弹性元素单独对齐
+			order: 1;
+			弹性元素的排列顺序
+			flex - grow: 2 元素扩展比例
+			flex - shrink: 0;
+			元素压缩比例
+			弹性布局： flex - wrap：； 换行
+			排列
+			justify - content: space - evenly;
+			设置水平方向排列
+			flex - start 水平靠左
+			flex - end 水平靠右
+			center 居中
+			space - between 两端对齐， 中间平分
+			space - around 环绕对齐
+			space - evenly 平分对齐
+			flex - direction ：row；设置以行排列
+			设置垂直对齐方式  适用于单行 
+			align - items: center;
+			flex - start 默认靠上
+			flex - end 靠下
+			center: 垂直居中
+			弹性布局：给父级设置，让子元素横向排列，子元素不能用浮动改变位置，可以用定位和边距改变
+			弹性元素不再有行标签和块标签之分 
+			order 用于设置弹性元素在弹性容器中的排列顺序 默认值为0 可以为负值， 值越大， 排列越靠后
+			flex-grow 元素的扩展值，就是当弹性容器的宽度用不完， 弹性元素有间隙时，
+			设置某一个元素占用间隙的比例值， 默认0，不占用间隙
+			flex-shrink 元素的压缩值， 就是当不换行且弹性容器的宽度不够， 弹性元素内部有空白时，
+			 设置某一个元素被压缩的比例值，默认值1，等比例压缩
+			// console.dir("11")
+			// let ab = []
+			// console.dir(ab)
+			// ab.push("11")
+			// ab.push(11)
+			// ab.unshift(22)
+		</script>
+	</body>
+</html>
